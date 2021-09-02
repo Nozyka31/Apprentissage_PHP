@@ -58,23 +58,27 @@ for($i = 0; $i < count($alphTab); $i++) {
   }
 }
 
-var_dump($vigenere)
 
     ?>
     <h5>2- encode le message "APPRENDRE PHP EST UNE CHOSE FORMIDABLE" avec la clé "BACKEND"</h5>
     <?php
     $message = "APPRENDRE PHP EST UNE CHOSE FORMIDABLE";
     $key = "BACKEND";
+
+    $messageTab = str_split($message);
+    $keyTab = _split($key);
+
+    for ($i = 0; $i < count($messageTab); $i++)
+    {
+      for ($j = 0; $j < count($keyTab); $j++)
+      {
+        $vigenere[$i][$j]
+      }
+    }
+
     // TO DO
+
     $cryptedMessage = $message;
-    /**
-    * astuce pour la rotation de la clé BACKEND
-    * 14 / 7 -> 2
-    * 15 / 7 -> 2 reste 1
-    * pour récuperer le "reste 1" il faut faire un modulo
-    * 15 % 7 -> 1
-    * 176 % 7 -> 1 (25 x 7 et reste 1)
-    */
     ?>
     <p>le message est: <?php echo $message; ?></p>
     <p>la clé est: <?php echo $key ?></p>
