@@ -16,7 +16,25 @@
 
     <div class="container">
       <h1>Page de test Php</h1>
-      <pre><?php echo "php tests"; ?></pre>
+      <pre>
+        
+      
+
+      <?php 
+        $txt = "php tests";
+        $index = 0;
+        $decimal = 15.48;
+        $tab = [];
+        $tab[] = $txt;
+        $tab[] = $index;
+        $tab[] = $decimal;
+        var_dump($tab); 
+
+      ?>
+    
+
+    
+    </pre>
     </div>
 
     <script src="/js/bootstrap.bundle.min.js"></script>

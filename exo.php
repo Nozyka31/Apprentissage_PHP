@@ -20,6 +20,12 @@
         <li>
             <span>premier exo</span>
         </li>
+        <li>
+          <span><a href="exo2.php">exrecice 2 : </a> décoder des chaines de caractère</span>
+        </li>
+        <li>
+          <span><a href="exo3.php">exrecice 3 : </a> travailler avec les tableaux</span>
+        </li>
     </ol>
 </div>
 
