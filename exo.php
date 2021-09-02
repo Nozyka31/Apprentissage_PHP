@@ -26,6 +26,9 @@
         <li>
           <span><a href="exo3.php">exrecice 3 : </a> travailler avec les tableaux</span>
         </li>
+        <li>
+          <span><a href="exo4.php">exrecice 4 : </a> travailler avec les boucles</span>
+        </li>
     </ol>
 </div>
 
