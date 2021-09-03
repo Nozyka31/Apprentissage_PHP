@@ -26,6 +26,18 @@
         <li>
           <span><a href="exo3.php">exrecice 3 : </a> travailler avec les tableaux</span>
         </li>
+        <li>
+          <span><a href="exo4.php">exrecice 4 : </a> travailler avec les boucles</span>
+        </li>
+        <li>
+          <span><a href="exo5.php">exrecice 5 : </a> les formulaires</span>
+        </li>
+        <li>
+          <span><a href="exo6.php">exrecice 6 : </a> les boucles while</span>
+        </li>
+        <li>
+          <span><a href="exo7.php">exrecice 7 : </a> on nettoie tout ça</span>
+        </li>
     </ol>
 </div>
 
