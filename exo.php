@@ -35,6 +35,9 @@
         <li>
           <span><a href="exo6.php">exrecice 6 : </a> les boucles while</span>
         </li>
+        <li>
+          <span><a href="exo7.php">exrecice 7 : </a> on nettoie tout ça</span>
+        </li>
     </ol>
 </div>
 
