@@ -18,6 +18,15 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/notes.php">notes</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/inscription.php">Inscription</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/connection.php">Connection</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/deconnection.php">Deconnection</a>
+                </li>
             </ul>
         </div>
     </div>

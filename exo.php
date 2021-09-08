@@ -1,3 +1,8 @@
+<?php
+session_start();
+include('./script/functions.php')
+?>
+
 <!doctype html>
 <html lang="fr">
   <head>
@@ -7,6 +12,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
 
     <title>Premier projet</title>
   </head>
@@ -15,28 +21,31 @@
 
 <div class="container">
     <h1>Les exercices</h1>
+
+    <button class="btn btn-dark mt-3 mb-3"><a href="https://github.com/Nozyka31/Apprentissage_PHP">Mon GitHub</a></button>
+
     <h2>les exercices en php</h2>
     <ol>
         <li>
-            <span>premier exo</span>
+            <span>Premier exercice</span>
         </li>
         <li>
-          <span><a href="exo2.php">exrecice 2 : </a> décoder des chaines de caractère</span>
+          <span><button class="btn btn-dark mt-3 mb-3"><a href="exo2.php">Exercice 2 </a></button> Décoder des chaines de caractère</span>
         </li>
         <li>
-          <span><a href="exo3.php">exrecice 3 : </a> travailler avec les tableaux</span>
+          <span><button class="btn btn-dark mt-3 mb-3"><a href="exo3.php">Exercice 3 </a></button> Travailler avec les tableaux</span>
         </li>
         <li>
-          <span><a href="exo4.php">exrecice 4 : </a> travailler avec les boucles</span>
+          <span><button class="btn btn-dark mt-3 mb-3"><a href="exo4.php">Exercice 4 </a></button> Travailler avec les boucles</span>
         </li>
         <li>
-          <span><a href="exo5.php">exrecice 5 : </a> les formulaires</span>
+          <span><button class="btn btn-dark mt-3 mb-3"><a href="exo5.php">Exercice 5 </a></button> Les formulaires</span>
         </li>
         <li>
-          <span><a href="exo6.php">exrecice 6 : </a> les boucles while</span>
+          <span><button class="btn btn-dark mt-3 mb-3"><a href="exo6.php">Exercice 6 </a></button> Les boucles while</span>
         </li>
         <li>
-          <span><a href="exo7.php">exrecice 7 : </a> on nettoie tout ça</span>
+          <span><button class="btn btn-dark mt-3 mb-3"><a href="exo7.php">Exercice 7 </a></button> On nettoie tout ça</span>
         </li>
     </ol>
 </div>

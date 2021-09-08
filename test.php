@@ -1,3 +1,8 @@
+<?php
+session_start();
+include('./script/functions.php')
+?>
+
 <!doctype html>
 <html lang="fr">
   <head>
@@ -18,20 +23,22 @@
       <h1>Page de test Php</h1>
       <pre>
         
-      
+      ===========================================
 
       <?php 
-        $txt = "php tests";
-        $index = 0;
-        $decimal = 15.48;
-        $tab = [];
-        $tab[] = $txt;
-        $tab[] = $index;
-        $tab[] = $decimal;
-        var_dump($tab); 
+        
+        if($_SESSION['user'])
+        {
+          echo "Vous êtes connectés.";
+        }
+        else
+        {
+          echo "Vous n'êtes pas connectés.";
+        }
 
       ?>
     
+    ===========================================
 
     
     </pre>
