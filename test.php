@@ -42,8 +42,84 @@ include('./script/functions.php')
     
       ===========================================
 
+      <?php 
+        
+        if(!empty($_POST))
+        {
+          $file = $_FILES['path'];
+          $fileOnServer = $file['tmp_name'];
+          $autorizedMime = [
+            "image/jpeg", "image/jpg", "image/gif", "image/png"
+          ];
+
+          //Test mime type
+          $testMime = mime_content_type($fileOnServer);
+          if(!in_array($testMime, $autorizedMime))
+          {
+            $errorMessage = "Le type du fichier n'est pas reconnu. Veuillez uploader une image.";
+          }
+
+          //Test if the file is uploaded
+          if(!is_uploaded_file($fileOnServer))
+          {
+            $errorMessage = "Le fichier ne s'est pas upload correctement";
+          }
+
+          //Test the size of the file
+          $fileSize = filesize($fileOnServer);
+          if($fileSize > 1000000)
+          {
+            $errorMessage = "Le fichier est trop volumineux";
+          }
+
+          if(!$errorMessage)
+          {
+            $originalFileName = basename($file['name']);
+            $ext = pathinfo($originalFileName, PATHINFO_EXTENSION);
+            $mainName = pathinfo($originalFileName, PATHINFO_FILENAME);
+            $tmpCleanedName = preg_replace("/\s/", "-", $mainName);
+            $cleanedName = trim($tmpCleanedName, "-");
+            $finalName = $cleanedName . uniqid() . '.' . $ext;
+            $destination = UPLOADFOLDER . $finalName;
+            $sucessUpload = move_uploaded_file($fileOnServer, $destination);
+            if(!$sucessUpload)
+            {
+              $message = "Fichier uploadé avec succès!";
+            }
+            else
+            {
+              $message = "Echec de l'upload du fichier.";
+            }
+        }
+      }
+      ?>
+      
+      ===========================================
+
+      </pre>
+      
+      <?php if($errorMessage) : ?>
+
+        <p><?php echo $errorMessage; ?></p>
+
+      <?php endif ?>
+
+      <?php if($message) : ?>
+
+        <p><?php echo $message; ?></p>
+
+      <?php endif ?>
+
+      <span>Envie de m'envoyer une petite image?</span>
+
+      <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label class="col-form-label" for="path">Votre fichier : </label>
+            <input type="file" class="form-control border border-3" name="path">
+        </div>    
+        <input type="submit" name="submit" class="btn btn-dark mt-3 mb-3" value="Uploader">
+      </form>
     
-    </pre>
     </div>
 
     <script src="/js/bootstrap.bundle.min.js"></script>
