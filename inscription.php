@@ -22,6 +22,7 @@ if(!empty($_POST))
         "first" => $first,
         "email" => $email,
         "password" => $hashPassword,
+        "role" => ["ROLE_USER"],
     ]);
 
     writeDB($data);

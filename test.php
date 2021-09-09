@@ -27,18 +27,20 @@ include('./script/functions.php')
 
       <?php 
         
-        if($_SESSION['user'])
+        if(in_array("ROLE_ADMIN", $_SESSION['user']['role']))
         {
-          echo "Vous êtes connectés.";
+          echo "Bonjour ", $_SESSION['user']['first'], " ", $_SESSION['user']['name'], ". Vous êtes administrateur de ce site.";
         }
         else
-        {
-          echo "Vous n'êtes pas connectés.";
+        { 
+          ?> <img src="assets/img/user.jpg" alt=""> 
+          <br><span>Si jamais vous êtes intéressés par un rôle d'administrateur, n'hésitez pas à me contacter sur Discord !</span>
+          <?php
         }
 
       ?>
     
-    ===========================================
+      ===========================================
 
     
     </pre>

@@ -24,6 +24,7 @@ if(!empty($_POST))
                     'name' => $user["name"],
                     'first' => $user["first"],
                     'email' => $user["email"],
+                    'role' => $user["role"],
                 ];
                 header("Location: /");
             }
