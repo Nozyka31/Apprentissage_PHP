@@ -1,3 +1,8 @@
+<?php
+session_start();
+include('./script/functions.php')
+?>
+
 <!doctype html>
 <html lang="fr">
   <head>
@@ -18,20 +23,24 @@
       <h1>Page de test Php</h1>
       <pre>
         
-      
+      ===========================================
 
       <?php 
-        $txt = "php tests";
-        $index = 0;
-        $decimal = 15.48;
-        $tab = [];
-        $tab[] = $txt;
-        $tab[] = $index;
-        $tab[] = $decimal;
-        var_dump($tab); 
+        
+        if(in_array("ROLE_ADMIN", $_SESSION['user']['role']))
+        {
+          echo "Bonjour ", $_SESSION['user']['first'], " ", $_SESSION['user']['name'], ". Vous êtes administrateur de ce site.";
+        }
+        else
+        { 
+          ?> <img src="assets/img/user.jpg" alt=""> 
+          <br><span>Si jamais vous êtes intéressés par un rôle d'administrateur, n'hésitez pas à me contacter sur Discord !</span>
+          <?php
+        }
 
       ?>
     
+      ===========================================
 
     
     </pre>

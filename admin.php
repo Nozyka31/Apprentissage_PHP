@@ -1,6 +1,11 @@
 <?php
 session_start();
-include('./script/functions.php')
+include('./script/functions.php');
+
+if(!in_array("ROLE_ADMIN", $_SESSION['user']["role"]))
+{
+    header("Location: /");
+}
 ?>
 
 <!doctype html>
@@ -13,13 +18,13 @@ include('./script/functions.php')
     <!-- Bootstrap CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
 
-    <title>Page vide!</title>
+    <title>Administration</title>
   </head>
   <body>
     <?php include("./partial/_navBar.php"); ?>
 
 <div class="container">
-    <h1>La page est vide!</h1>
+    <h1>Bienvenue sur la page Administrateur</h1>
 </div>
 
     <script src="/js/bootstrap.bundle.min.js"></script>

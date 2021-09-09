@@ -1,5 +1,7 @@
-<?php 
-require("./script/cryptage.php")
+<?php
+session_start();
+include('./script/functions.php');
+require("./script/cryptage.php");
 ?>
 
 <!doctype html>
@@ -82,7 +84,7 @@ require("./script/cryptage.php")
                 <input type="text" class="form-control border border-3" name="key" value="<?php echo $key; ?>">
             </div>
             <div class="form-group">
-                <label for="pet-select">Choose a pet:</label>
+                <label for="encodage">Choisis ton système d'encodage :</label>
 
                 <select name="encodage" class="form-control border border-3">
                     <option value="">--Please choose an option--</option>
@@ -93,7 +95,7 @@ require("./script/cryptage.php")
                 </select>    
             </div>
             <a href="/exo5.php" class="btn btn-dark mt-3 mb-3">Annuler</a>
-            <input type="submit" class="btn btn-dark mt-3 mb-3" value="Vigenèriser">
+            <input type="submit" class="btn btn-dark mt-3 mb-3" value="Encoder">
         </form>
     </div>
 

@@ -1,3 +1,8 @@
+<?php
+session_start();
+include('./script/functions.php')
+?>
+
 <!doctype html>
 <html lang="fr">
   <head>
