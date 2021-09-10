@@ -50,3 +50,22 @@ function writeDB(array $data): bool
     }
     return $correct;
 }
+
+function updateUser(array $data, string $id)
+{/*
+    echo '<pre>';
+        var_dump($data);
+    echo '</pre>';*/
+
+    $updateUser = [];
+    $users = openDB();
+    foreach($users['user'] as $i => $user)
+    {
+        if($user['index'] == $id)
+        {
+            $users['user'][$i] = array_merge($user, $data);
+        }
+    }
+
+    file_put_contents(DBJSON, json_encode($users));
+}

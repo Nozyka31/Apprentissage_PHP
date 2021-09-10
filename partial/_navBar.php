@@ -24,11 +24,11 @@
                         <li class="nav-item align-self-center">
                             <a class="nav-link" href="/admin.php">Admin</a>
                         </li>
+                    <?php else : ?>
+                        <li class="nav-item align-self-center">
+                            <a class="nav-link" href="/account.php">Mon compte</a>
+                        </li>
                     <?php endif ?>
-                    
-                    <li class="nav-item justify-content-center text-center">
-                        <a class="nav-link"><?php echo $_SESSION['user']['first'], " ", $_SESSION['user']['name']; ?></a>
-                    </li>
                     <li class="nav-item align-self-center">
                         <button class="btn btn-warning btn-sm"><a class="nav-link" href="/deconnection.php">Deconnection</a></button>
                     </li>
