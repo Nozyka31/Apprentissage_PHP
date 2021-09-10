@@ -84,16 +84,20 @@ include('./script/functions.php')
             $sucessUpload = move_uploaded_file($fileOnServer, $destination);
             if(!$sucessUpload)
             {
-              $message = "Fichier uploadé avec succès!";
+              $message = "Echec de l'upload du fichier.";
             }
             else
             {
-              $message = "Echec de l'upload du fichier.";
+              $message = "Fichier uploadé avec succès!";
+              echo $destination;
             }
         }
       }
       ?>
       
+      <?php echo "Photo dans le json : ", $_SESSION['user']['photo']; ?>
+      <?php echo "Destination : ", $destination ?>
+
       ===========================================
 
       </pre>

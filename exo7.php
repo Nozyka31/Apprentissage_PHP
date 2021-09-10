@@ -94,7 +94,7 @@ require("./script/cryptage.php");
                     <option value="decoderCesar">Decodage par Cesar</option>
                 </select>    
             </div>
-            <a href="/exo5.php" class="btn btn-dark mt-3 mb-3">Annuler</a>
+            <a href="/exo7.php" class="btn btn-dark mt-3 mb-3">Annuler</a>
             <input type="submit" class="btn btn-dark mt-3 mb-3" value="Encoder">
         </form>
     </div>
